@@ -1,0 +1,100 @@
+name: Security CI
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  # 1. SAST עם Bandit
+  bandit:
+    name: Bandit Scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install Bandit
+        run: pip install bandit
+      - name: Run Bandit
+        run: bandit -r CLI --severity-level high --confidence-level high
+
+  # 2. Dependency Scanning
+  deps-scan:
+    name: Dependency Scan
+    runs-on: ubuntu-latest
+    needs: bandit
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: pip-audit
+        run: |
+          pip install pip-audit
+          pip-audit
+      - name: cargo-audit
+        run: |
+          curl https://sh.rustup.rs -sSf | sh -s -- -y
+          source $HOME/.cargo/env
+          cargo install cargo-audit
+          cargo-audit
+
+  # 3. DAST עם OWASP ZAP
+  zap:
+    name: OWASP ZAP Scan
+    runs-on: ubuntu-latest
+    needs: deps-scan
+    services:
+      zap:
+        image: owasp/zap2docker-stable
+        ports:
+          - 8080:8080
+    steps:
+      - uses: actions/checkout@v3
+      - name: Wait for ZAP to start
+        run: |
+          while ! curl -s http://localhost:8080; do sleep 5; done
+      - name: Run ZAP Baseline Scan
+        run: |
+          docker run --network host owasp/zap2docker-stable zap-baseline.py \
+            -t http://localhost:8000/api/health \
+            -g gen.conf \
+            -r zap-report.html
+
+  # 4. Fuzzing על FFI (דוגמה בסיסית)
+  fuzz:
+    name: AFL Fuzzing
+    runs-on: ubuntu-latest
+    needs: zap
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install AFL
+        run: sudo apt-get update && sudo apt-get install -y afl
+      - name: Build target for fuzzing
+        run: |
+          cd rust_core
+          cargo build --release
+      - name: Run AFL (example)
+        run: |
+          # מצריך הכנת harness מתאימה ב-rust_core/fuzz_harness
+          afl-fuzz -i fuzz_inputs -o fuzz_output -- target/release/rust_core_fuzz
+
+  # 5. SonarCloud (אופציונלי, אם אתם משתמשים ב-Sonar)
+  sonar:
+    name: SonarCloud Scan
+    runs-on: ubuntu-latest
+    needs: fuzz
+    steps:
+      - uses: actions/checkout@v3
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@master
+        with:
+          projectKey: your-org_AegisSpectra
+          organization: your-org
+          scannerMode: cli
+          configFile: sonar-project.properties

@@ -1,0 +1,14 @@
+[
+    {
+        "time": "2025-05-24T00:12:54.247226",
+        "type": "ALERT",
+        "message": "Suspicious behavior in process explorer.exe",
+        "risk_score": 55
+    },
+    {
+        "time": "2025-05-24T01:54:52.851044",
+        "type": "QUARANTINE",
+        "message": "Suspicious behavior in process explorer.exe",
+        "risk_score": 60
+    }
+]

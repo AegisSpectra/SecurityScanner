@@ -1,0 +1,17 @@
+[2025-05-24 21:38:41] Evaluating threat: High CPU/Memory process: System Idle Process | Score: 45
+[2025-05-24 21:38:42] Evaluating threat: High CPU/Memory process: winlogson.exe | Score: 45
+[2025-05-24 21:39:03] Evaluating threat: Suspicious file: /hp\HPQWare\BTBHost\PBR\ReplaceString.vbs | Score: 60
+[2025-05-24 21:39:03] Evaluating threat: Detected threat in file: /hp\HPQWare\BTBHost\PBR\ReplaceString.vbs | Score: 20
+[2025-05-24 21:39:03] Ignored threat: /hp\HPQWare\BTBHost\PBR\ReplaceString.vbs
+[2025-05-24 21:39:04] Evaluating threat: Suspicious file: /hp\HPQWare\Util\disktype_x64.exe | Score: 60
+[2025-05-24 21:39:04] Evaluating threat: Detected threat in file: /hp\HPQWare\Util\disktype_x64.exe | Score: 20
+[2025-05-24 21:39:04] Ignored threat: /hp\HPQWare\Util\disktype_x64.exe
+[2025-05-24 21:39:04] Evaluating threat: Suspicious file: /hp\HPQWare\Util\disktype_x86.exe | Score: 60
+[2025-05-24 21:39:04] Evaluating threat: Detected threat in file: /hp\HPQWare\Util\disktype_x86.exe | Score: 20
+[2025-05-24 21:39:04] Ignored threat: /hp\HPQWare\Util\disktype_x86.exe
+[2025-05-24 21:39:09] Evaluating threat: Suspicious file: /hp\Network_Driver\REALTEK\RealtekRT_ZZNCB2\1.0.0.184\src\Drivers\RTWLANE_Driver\Version\RTKModuleVersion.exe | Score: 60
+[2025-05-24 21:39:09] Evaluating threat: Detected threat in file: /hp\Network_Driver\REALTEK\RealtekRT_ZZNCB2\1.0.0.184\src\Drivers\RTWLANE_Driver\Version\RTKModuleVersion.exe | Score: 20
+[2025-05-24 21:39:09] Ignored threat: /hp\Network_Driver\REALTEK\RealtekRT_ZZNCB2\1.0.0.184\src\Drivers\RTWLANE_Driver\Version\RTKModuleVersion.exe
+[2025-05-24 22:05:17] Evaluating threat: Suspicious file: /Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.5\analyzers\dotnet\cs\System.Text.RegularExpressions.Generator.dll | Score: 60
+[2025-05-24 22:05:17] Evaluating threat: Detected threat in file: /Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.5\analyzers\dotnet\cs\System.Text.RegularExpressions.Generator.dll | Score: 20
+[2025-05-24 22:05:17] Ignored threat: /Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.5\analyzers\dotnet\cs\System.Text.RegularExpressions.Generator.dll

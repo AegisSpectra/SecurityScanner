@@ -1,0 +1,4 @@
+rich
+pyshark
+opencv-python
+requests

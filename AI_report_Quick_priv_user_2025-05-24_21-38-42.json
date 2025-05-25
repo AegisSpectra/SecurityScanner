@@ -1,0 +1,12 @@
+{
+    "type": "Quick",
+    "user": "priv_user",
+    "role": "private_client",
+    "scanned": 240,
+    "detected": 2,
+    "time": "2025-05-24 21:38:42",
+    "descriptions": [
+        "High CPU/Memory process: System Idle Process",
+        "High CPU/Memory process: winlogson.exe"
+    ]
+}

@@ -1,0 +1,5 @@
+[2025-05-24 21:39:03] Action: IGNORE | File: /hp\HPQWare\BTBHost\PBR\ReplaceString.vbs | Status: ignored
+[2025-05-24 21:39:04] Action: IGNORE | File: /hp\HPQWare\Util\disktype_x64.exe | Status: ignored
+[2025-05-24 21:39:04] Action: IGNORE | File: /hp\HPQWare\Util\disktype_x86.exe | Status: ignored
+[2025-05-24 21:39:09] Action: IGNORE | File: /hp\Network_Driver\REALTEK\RealtekRT_ZZNCB2\1.0.0.184\src\Drivers\RTWLANE_Driver\Version\RTKModuleVersion.exe | Status: ignored
+[2025-05-24 22:05:17] Action: IGNORE | File: /Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.5\analyzers\dotnet\cs\System.Text.RegularExpressions.Generator.dll | Status: ignored

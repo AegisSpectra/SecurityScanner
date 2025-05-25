@@ -1,0 +1,6 @@
+{
+    "auto_defense": true,
+    "debug_mode": true,
+    "default_scan_dir": "/",
+    "virustotal_api_key": "2b75975da66d30c3e0d405ac7c487a6bc6263a3786bcf09f56ae0a30c27a9a66"
+}

@@ -1,0 +1,74 @@
+[
+    {
+        "time": "2025-05-24T21:38:41.951227",
+        "type": "ALERT",
+        "message": "High CPU/Memory process: System Idle Process",
+        "risk_score": 45
+    },
+    {
+        "time": "2025-05-24T21:38:42.490227",
+        "type": "ALERT",
+        "message": "High CPU/Memory process: winlogson.exe",
+        "risk_score": 45
+    },
+    {
+        "time": "2025-05-24T21:39:03.333105",
+        "type": "QUARANTINE",
+        "message": "Suspicious file: /hp\\HPQWare\\BTBHost\\PBR\\ReplaceString.vbs",
+        "risk_score": 60
+    },
+    {
+        "time": "2025-05-24T21:39:03.335105",
+        "type": "IGNORE",
+        "message": "Detected threat in file: /hp\\HPQWare\\BTBHost\\PBR\\ReplaceString.vbs",
+        "risk_score": 20
+    },
+    {
+        "time": "2025-05-24T21:39:04.251443",
+        "type": "QUARANTINE",
+        "message": "Suspicious file: /hp\\HPQWare\\Util\\disktype_x64.exe",
+        "risk_score": 60
+    },
+    {
+        "time": "2025-05-24T21:39:04.253443",
+        "type": "IGNORE",
+        "message": "Detected threat in file: /hp\\HPQWare\\Util\\disktype_x64.exe",
+        "risk_score": 20
+    },
+    {
+        "time": "2025-05-24T21:39:04.661055",
+        "type": "QUARANTINE",
+        "message": "Suspicious file: /hp\\HPQWare\\Util\\disktype_x86.exe",
+        "risk_score": 60
+    },
+    {
+        "time": "2025-05-24T21:39:04.662055",
+        "type": "IGNORE",
+        "message": "Detected threat in file: /hp\\HPQWare\\Util\\disktype_x86.exe",
+        "risk_score": 20
+    },
+    {
+        "time": "2025-05-24T21:39:09.564120",
+        "type": "QUARANTINE",
+        "message": "Suspicious file: /hp\\Network_Driver\\REALTEK\\RealtekRT_ZZNCB2\\1.0.0.184\\src\\Drivers\\RTWLANE_Driver\\Version\\RTKModuleVersion.exe",
+        "risk_score": 60
+    },
+    {
+        "time": "2025-05-24T21:39:09.566120",
+        "type": "IGNORE",
+        "message": "Detected threat in file: /hp\\Network_Driver\\REALTEK\\RealtekRT_ZZNCB2\\1.0.0.184\\src\\Drivers\\RTWLANE_Driver\\Version\\RTKModuleVersion.exe",
+        "risk_score": 20
+    },
+    {
+        "time": "2025-05-24T22:05:17.505528",
+        "type": "QUARANTINE",
+        "message": "Suspicious file: /Program Files\\dotnet\\packs\\Microsoft.NETCore.App.Ref\\8.0.5\\analyzers\\dotnet\\cs\\System.Text.RegularExpressions.Generator.dll",
+        "risk_score": 60
+    },
+    {
+        "time": "2025-05-24T22:05:17.507529",
+        "type": "IGNORE",
+        "message": "Detected threat in file: /Program Files\\dotnet\\packs\\Microsoft.NETCore.App.Ref\\8.0.5\\analyzers\\dotnet\\cs\\System.Text.RegularExpressions.Generator.dll",
+        "risk_score": 20
+    }
+]

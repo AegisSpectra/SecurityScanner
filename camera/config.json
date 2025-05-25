@@ -1,0 +1,12 @@
+{
+  "cameras": [
+    {
+      "name": "Home Camera",
+      "url": "rtsp://192.168.1.101:554/live"
+    },
+    {
+      "name": "Demo Camera",
+      "url": "rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov"
+    }
+  ]
+}

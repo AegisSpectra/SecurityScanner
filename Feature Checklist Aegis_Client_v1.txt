@@ -1,0 +1,48 @@
+ מה עוד צריך או מומלץ להשלים כדי שזה יהיה מוצר ברמה של NASA / Tesla / SentinelOne:
+
+1. חיבור פיזי למצלמות IP / RTSP
+לבנות את camera/config.json עם פרטי מצלמה.
+
+קובץ camera/controller.py שפותח stream ומנתח פריימים עם OpenCV.
+
+זיהוי תנועה והקלטה מבוססת אירוע.
+
+כניסה לתפריט CamLog → צפה במצלמות אמיתיות, לא placeholder.
+
+2. מודול הגנה רשתית
+פיתוח כלי ניתוח רשת: network_traffic.py.
+
+שילוב PyShark או Scapy לזיהוי חריגות בזמן אמת.
+
+Alerts בזמן אמת למנהל או SOC אם מזוהה תעבורה חשודה.
+
+3. השלמת דשבורדים נוספים
+client_business_dashboard.py
+
+soc_dashboard.py (אם טרם הושלם) כולל response tools.
+
+4. תיעוד ושקיפות
+תיעוד מלא לקובץ README.txt או README.md עם הסברים:
+
+איך להפעיל
+
+איך להוסיף משתמש
+
+איך לשנות הרשאות
+
+איך לשלב מצלמות או License
+
+5. התקנה אוטומטית + Startup
+קובץ התקנה אוטומטי (batch או exe) ללקוח.
+
+הכנסת המערכת להפעלה אוטומטית (startup folder, registry או task scheduler).
+
+6. הגנה עצמית
+אנטי־טמפרינג: נועל קבצים קריטיים.
+
+Password ב־CLI על גישה לפונקציות רגישות (כמו מחיקת לוגים).
+
+7. Backups + Recovery
+הפקודה backup_now() שגיבוי את DB + הגדרות.
+
+אפשרות restore_backup(path) להחזרת מערכת.
